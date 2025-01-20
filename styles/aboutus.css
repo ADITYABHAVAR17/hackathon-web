@@ -1,0 +1,241 @@
+:root {
+    --primaryuni: #ff5e00;
+    --secondaryuni: #0f172a;
+    --tertiaryuni: #ffffff;
+    --card-bgunique: rgba(15, 23, 42, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.about-section {
+    padding: 5% 0;
+    text-align: center;
+    overflow: hidden;
+    color: var(--primaryuni);
+}
+.header {
+    position: relative;
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 3% auto;
+    padding: 20px 40px;
+    animation: fadeIn 1s ease-out;
+}
+
+.header::before, .header::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+
+.header::before {
+    top: 0;
+    left: 0;
+    border-top: 5px solid var(--primaryuni);
+    border-left: 5px solid var(--primaryuni);
+}
+
+.header::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 5px solid var(--primaryuni);
+    border-right: 5px solid var(--primaryuni);
+}
+
+.intro-text {
+    margin: 2% 10%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    animation: slideUp 1s ease-out;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin: 4% 5%;
+    padding: 0 20px;
+}
+
+.card {
+    flex: 1 1 400px;
+    max-width: 500px;
+    padding: 30px;
+    background: var(--card-bgunique);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 94, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-out;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 94, 0, 0.2);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: var(--primaryuni);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover i {
+    transform: translateY(-10px) scale(1.1);
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: var(--tertiaryuni);
+}
+
+.card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e5e5e5;
+}
+
+.footer-text {
+    margin: 4% 10%;
+    padding: 20px;
+    background: var(--card-bgunique);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    animation: slideUp 1s ease-out;
+}
+
+.highlight {
+    color: var(--primaryuni);
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading Animation */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondaryuni);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeOut 0.5s ease-out 1s forwards;
+}
+
+.loader::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ffffff;
+    border-top-color: var(--primaryuni);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        font-size: 2.5rem;
+        padding: 15px 30px;
+    }
+
+    .cards-container {
+        gap: 30px;
+    }
+
+    .card {
+        flex: 1 1 300px;
+        padding: 20px;
+    }
+
+    .intro-text, .card p, .footer-text {
+        font-size: 1rem;
+    }
+
+    .card h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 2rem;
+        padding: 10px 20px;
+    }
+
+    .header::before, .header::after {
+        width: 15px;
+        height: 15px;
+    }
+  .card p{
+    font-size: 1rem;
+  }
+
+    .cards-container {
+        margin: 4% 2%;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}   
+  /* Disable hover effects for screens less than 768px (mobile screens) */
+@media (max-width: 768px) {
+.card {
+pointer-events: none; /* Prevent hover effects */
+}
+}
+  /* Disable hover effects for screens less than 768px (mobile screens) */
+@media (max-width: 768px) {
+.card {
+pointer-events: none; /* Prevent hover effects */
+}
+}
+  /* Disable hover effects for screens less than 768px (mobile screens) */
