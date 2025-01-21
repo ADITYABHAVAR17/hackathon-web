@@ -22,11 +22,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/hero.css">
     <link rel="stylesheet" href="./styles/timeline.css">
     <link rel="stylesheet" href="./styles/aboutus.css">
     <link rel="stylesheet" href="./styles/events.css">
+    <link rel="stylesheet" href="./styles/projects.css">
 
     <script type="text/javascript">
         (function () {
@@ -234,8 +239,8 @@
     </section>
 <!-- Eventts -->
     <section id="Events">
-        <div class="club-header">
-            <h1 class="club-title">Our Event Chronicles</h1>
+        <div class="heading">
+            <h1 class="">Our Event Chronicles</h1>
         </div>
         <div id="photo">
             <div class="event-card">
@@ -395,7 +400,62 @@
             <!-- Add more cards as needed -->
         </div>
     </section>
-   <!-- Timeline -->
+   <!-- Project-->
+   <section id="Projects">
+    <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                Our Projects
+            </h1>
+            <p class="text-gray-400 text-lg">Innovating the future through code</p>
+        </header>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" x-data="{ projects: window.projectData }">
+            <template x-for="(project, index) in projects" :key="index">
+                <div 
+                    class="gradient-border rounded-xl p-[2px] transform transition-all duration-500 hover:scale-[1.02]"
+                    data-aos="fade-up"
+                    :data-aos-delay="index * 100"
+                >
+                    <div class="glass-card rounded-xl p-6 h-full card-glow transition-all duration-500 hover:bg-opacity-80">
+                        <!-- Card Header -->
+                        <div class="mb-4">
+                            <h2 
+                                class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2"
+                                x-text="project.title"
+                            ></h2>
+                        </div>
+
+                        <!-- Card Body -->
+                        <p 
+                            class="text-gray-300 mb-6 leading-relaxed"
+                            x-text="project.description"
+                        ></p>
+
+                        <!-- Card Tags -->
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <template x-for="tag in project.tags" :key="tag">
+                                <span 
+                                    class="px-3 py-1 text-sm rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 
+                                           text-white transform transition-all duration-300 hover:scale-105 hover:from-indigo-500 
+                                           hover:to-purple-500 shadow-lg"
+                                    x-text="tag"
+                                ></span>
+                            </template>
+                        </div>
+
+                        <!-- Decorative Element -->
+                        <div class="absolute top-2 right-2 opacity-10">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 blur-xl"></div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</section>
     <!-- contactus......... -->
 
     <section id="ContactUs">

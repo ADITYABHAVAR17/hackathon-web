@@ -202,6 +202,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // contactus. . . . . . 
 
+// projects
+window.projectData = [
+  {
+      title: "Web Scraping with LLM",
+      description: "This project extracts website data and uses the LLaMA 3 model to analyze, summarize, and enable interactive Q&A for contextual insights.",
+      tags: ["Web Scraping", "LLM", "Data Analysis", "Automation", "NLP"]
+  },
+  {
+      title: "Supply Chain Management",
+      description: "Real-time dashboards for inventory insights, AI-driven demand forecasting to optimize restocking and Improved efficiency in inventory and space management.",
+      tags:  ["Android Studio", "Kotlin", "Machine Learning"]
+  },
+  {
+      title: "Sahayak AI",
+      description: "An AI platform simplifying access to government schemes for rural citizens with personalized recommendations, document verification, and multilingual assistance.",
+      tags: ["AI", "Citizen Services", "Government Schemes", "Automation", "Regional Languages"]
+  },
+  {
+      title: "Good Gifts",
+      description: "A platform for buying restaurant gift cards with discounts, ideal for gifting dining experiences to loved ones effortlessly.",
+      tags: ["Gift Cards", "Restaurants", "Food Lovers", "Discounts", "Convenience"]
+  },
+  {
+      title: "Real Time Chat Application",
+      description: "A real-time chat app with Socket.io, secure JWT-based authentication, and MongoDB for data storage.",
+      tags: ["Real-Time Messaging", "Socket.io", "Authentication", "JWT", "MongoDB"]
+
+  },
+  {
+     title: "Rental Application Portal",
+      description: "RentApply simplifies property rental applications with a user-friendly interface for applicants and efficient management for admins.",
+      tags: ["Real Estate", "Application Portal", "Automation", "Web App"]
+  }
+];
+
+// Initialize AOS
+AOS.init({
+  duration: 800,
+  once: true,
+  offset: 100
+});
 
 
 // Emailjs for contact
