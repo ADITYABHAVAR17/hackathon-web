@@ -244,7 +244,6 @@ AOS.init({
   offset: 100
 });
 
-
 // Emailjs for contact
 function sendMail(){
   Popup(event);
