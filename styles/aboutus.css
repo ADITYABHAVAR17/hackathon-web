@@ -5,11 +5,11 @@
     --card-bgunique: rgba(15, 23, 42, 0.8);
 }
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 
 .about-section {
@@ -36,7 +36,7 @@
     font-size: 3.5rem;
     /* font-weight: bold; */
     margin: 3% auto;
-    padding: 20px 40px;
+    padding: 3px 20px;
     animation: fadeIn 1s ease-out;
     font-weight: 900;
 }
