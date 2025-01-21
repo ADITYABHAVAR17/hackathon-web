@@ -137,7 +137,7 @@
     
 
 <!-- About Us Section -->
-<section class="about-section">
+<section id="AboutUs" class="about-section">
     <h1 class="header">About Us</h1>
     
     <p class="intro-text">
@@ -234,8 +234,8 @@
     </section>
 <!-- Eventts -->
     <section id="Events">
-        <div class="heading">
-            <h1>Our Event Chronicles</h1>
+        <div class="club-header">
+            <h1 class="club-title">Our Event Chronicles</h1>
         </div>
         <div id="photo">
             <div class="event-card">
@@ -486,7 +486,7 @@
                     <ul class="space-y-2">
                         <li><a href="#home" class="hover:text-blue-400">Home</a></li>
                         <li><a href="#AboutUs" class="hover:text-blue-400">About</a></li>
-                        <li><a href="#events" class="hover:text-blue-400">Events</a></li>
+                        <li><a href="#Events" class="hover:text-blue-400">Events</a></li>
                         <li><a href="#memories" class="hover:text-blue-400">Memories</a></li>
                         <li><a href="#team" class="hover:text-blue-400">Team</a></li>
                         <li><a href="#ContactUs" class="hover:text-blue-400">Contact</a></li>
@@ -510,9 +510,10 @@
                         </a>
                     </div>
                     <div id="counter-visitor" class="mt-6">
-                        <span id="label-visitor" class="block text-gray-400">Visitors</span>
-                        <span id="count-visitor" class="text-xl font-bold">0</span>
+                        <span id="label-visitor" c>Visitors</span>
+                        <span id="count-visitor" class="text-xl font-bold"></span>
                     </div>
+                   
                 </div>
             </div>
         </div>
@@ -529,16 +530,8 @@
 
 
 </body>
-<script>
-    // Dynamic visitor counter (Optional)
-    const countVisitor = () => {
-        let counter = parseInt(localStorage.getItem('visitor_count') || 0);
-        counter += 1;
-        localStorage.setItem('visitor_count', counter);
-        document.getElementById('count-visitor').innerText = counter;
-    };
-    window.onload = countVisitor;
-</script>
+
+<script src="./scripts/visitor.js"></script>
 <script src="./scripts/home.js"></script>
 
 </html>

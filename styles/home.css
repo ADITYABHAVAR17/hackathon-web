@@ -435,6 +435,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 140px;
 }
 
 .Full-form {
@@ -762,7 +763,7 @@ textarea {
   background: linear-gradient(black, rgb(18, 28, 39));
   padding-top: 50px;
   margin-bottom: 0;
-  margin-top: 4%;
+  margin-top: 14%;
   color: var(--tertiary);
 }
 
@@ -933,6 +934,7 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 20px rgba(255, 107, 0, 0.2);
+  font-weight: 700;
 }
 .domains-grid {
   display: grid;
@@ -1039,6 +1041,9 @@ a:hover {
   .domains-grid {
     grid-template-columns: repeat(1, 1fr);
     /* padding: 0.5rem; */
+  }
+  h1 {
+    font-size: 1rem;
   }
 }
 
